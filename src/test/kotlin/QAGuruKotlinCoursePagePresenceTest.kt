@@ -1,14 +1,15 @@
 
-import io.qameta.allure.Feature
 import org.junit.jupiter.api.DisplayName
 import com.codeborne.selenide.Selenide.element
 import com.codeborne.selenide.Selenide.open
 import com.codeborne.selenide.Condition.text
 import com.codeborne.selenide.Condition.exactText
 import com.codeborne.selenide.Configuration
+import org.junit.jupiter.api.Tag
+import org.junit.jupiter.api.Tags
 import org.junit.jupiter.api.Test
 
-@Feature("Calculator Operations")
+@Tags(Tag("regression"), Tag("smoke"))
 class QAGuruKotlinCoursePagePresenceTest {
 
     @Test
