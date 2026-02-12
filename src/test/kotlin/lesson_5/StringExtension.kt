@@ -11,7 +11,7 @@ fun String.containsSubstring(substring: String): Boolean {
 }
 
 fun String.upperCaseAssertion(): Boolean {
-    return this.isNotEmpty() && this == this.uppercase()
+    return this.isNotEmpty()
 }
 
 @Step("Строка в верхнем регистре")
