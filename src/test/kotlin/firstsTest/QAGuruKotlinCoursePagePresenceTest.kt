@@ -1,4 +1,4 @@
-
+package firstsTest
 import org.junit.jupiter.api.DisplayName
 import com.codeborne.selenide.Selenide.element
 import com.codeborne.selenide.Selenide.open

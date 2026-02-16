@@ -1,4 +1,4 @@
-package lesson_4
+package firstsTest.lesson_4
 
 data class Student(
     val person: Person,

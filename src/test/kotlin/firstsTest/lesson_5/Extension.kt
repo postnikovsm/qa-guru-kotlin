@@ -1,10 +1,9 @@
-package lesson_5
+package firstsTest.lesson_5
 
+import firstsTest.lesson_4.Person
+import firstsTest.lesson_4.Student
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.types.shouldBeInstanceOf
-import lesson_4.Person
-
-import lesson_4.Student
 
 fun Student.checkName(name: String) {
     person.name shouldBe name

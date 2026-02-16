@@ -1,8 +1,8 @@
-package lesson_5
+package firstsTest.lesson_5
 
+import firstsTest.lesson_4.Person
+import firstsTest.lesson_4.Student
 import io.kotest.matchers.shouldBe
-import lesson_4.Person
-import lesson_4.Student
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
