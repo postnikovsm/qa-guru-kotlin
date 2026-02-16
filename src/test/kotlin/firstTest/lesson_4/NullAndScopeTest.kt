@@ -1,4 +1,4 @@
-package firstsTest.lesson_4
+package firstTest.lesson_4
 
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.nulls.shouldNotBeNull

@@ -1,4 +1,4 @@
-package firstsTest.lesson_5
+package firstTest.lesson_5
 
 import io.qameta.allure.Step
 
