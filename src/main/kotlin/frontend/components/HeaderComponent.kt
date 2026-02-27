@@ -15,11 +15,11 @@ class HeaderComponent {
         return this
     }
 
-    @Step("клик по ссылкам через список")
+    @Step("Клик по всем ссылкам в хэдере")
     fun clickAllLinks(): HeaderComponent {
         linksHeader
-            .map { it.text }
-            .forEach { clickLink(it) }
+            .map { it.text.trim() }
+            .forEach { clickLinkByExtension(it) }
         return this
     }
 

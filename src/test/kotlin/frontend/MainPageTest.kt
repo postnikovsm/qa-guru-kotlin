@@ -2,6 +2,7 @@ package frontend
 
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
+import org.example.frontend.components.HeaderComponent
 import org.example.frontend.helpers.BaseUITest
 import org.example.frontend.pages.MainPage
 import org.junit.jupiter.api.DisplayName
@@ -25,5 +26,11 @@ class MainPageTest: BaseUITest()  {
             .getTitle()
 
         title shouldBe "Welcome to Brew & Bean"
+    }
+
+    @Test
+    @DisplayName("Прокликиваем по всем ссылкам (?)")
+    fun test() {
+         HeaderComponent().clickAllLinks()
     }
 }
