@@ -1,10 +1,9 @@
-package firstTest
-import org.junit.jupiter.api.DisplayName
-import com.codeborne.selenide.Selenide.element
-import com.codeborne.selenide.Selenide.open
-import com.codeborne.selenide.Condition.text
-import com.codeborne.selenide.Condition.exactText
+package firstTest.lesson_5
+
+import com.codeborne.selenide.Condition
 import com.codeborne.selenide.Configuration
+import com.codeborne.selenide.Selenide
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Tags
 import org.junit.jupiter.api.Test
@@ -16,10 +15,10 @@ class QAGuruKotlinCoursePagePresenceTest {
     @DisplayName("Проверка названия курса")
     fun checkNameCourse() {
         Configuration.pageLoadStrategy = "eager";
-        open("https://qa.guru/kotlin")
+        Selenide.open("https://qa.guru/kotlin")
 
-        element(".uui-heading-medium-curs .text-span")
-            .shouldHave(text("Kotlin"))
+        Selenide.element(".uui-heading-medium-curs .text-span")
+            .shouldHave(Condition.text("Kotlin"))
     }
 
     @Test
@@ -27,9 +26,9 @@ class QAGuruKotlinCoursePagePresenceTest {
     fun checkPriceCourseTest() {
         Configuration.pageLoadStrategy = "eager";
         val price = "6 085"
-        open("https://qa.guru/kotlin")
+        Selenide.open("https://qa.guru/kotlin")
 
-        element(".new-rassrochka-text-wa-course")
-            .shouldHave(exactText("Рассрочка от $price р/мес"))
+        Selenide.element(".new-rassrochka-text-wa-course")
+            .shouldHave(Condition.exactText("Рассрочка от $price р/мес"))
     }
 }

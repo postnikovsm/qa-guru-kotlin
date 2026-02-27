@@ -29,7 +29,6 @@ test {
         events "passed", "skipped", "failed"
     }
 
-    //Pass system properties into JVM with tests
     systemProperties(System.getProperties())
 }
 
