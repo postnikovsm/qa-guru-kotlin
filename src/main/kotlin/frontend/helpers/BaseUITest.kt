@@ -6,22 +6,18 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 
 open class BaseUITest {
-
-    init {
-        Configuration.baseUrl = "http://localhost:4000"
-        Configuration.pageLoadStrategy = "eager"
-        Configuration.reopenBrowserOnFail = true
-        Configuration.timeout = 5000
-        Configuration.browserSize = "1920x1080"
+    companion object {
+        init {
+            Configuration.browser = DriverProvider::class.java.name
+            Configuration.timeout = 10_000
+            Configuration.pageLoadStrategy = "normal"
+            Configuration.reopenBrowserOnFail = true
+        }
     }
 
-    @BeforeEach
-    fun openBrowser() {
-        Selenide.open("/")
-    }
 
     @AfterEach
-    fun clearBrowser() {
+    fun tearDown() {
         Selenide.clearBrowserCookies()
         Selenide.clearBrowserLocalStorage()
     }
