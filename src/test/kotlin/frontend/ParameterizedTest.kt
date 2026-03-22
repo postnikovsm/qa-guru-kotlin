@@ -47,8 +47,9 @@ class ParameterizedTest: BaseUITest() {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = ["Products", "Orders", "Contact", "Cart"])
-    fun testWithValueSource(links: String) {
+    @DisplayName("Проверка ссылок в хэдере")
+    @ValueSource(strings = ["Products", "Orders", "Contact", "Cart", "Join"])
+    fun checkLinksHeader(links: String) {
         val listLinks = HeaderComponent().getLinksHeaders()
 
         listLinks shouldContain links
