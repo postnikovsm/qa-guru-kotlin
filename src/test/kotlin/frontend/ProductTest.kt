@@ -12,9 +12,9 @@ class ProductTest: BaseUITest() {
 
     @Test
     @DisplayName("Popular Products присутствую в списке All Products")
-    fun testProductsInCart() {
+    fun checkPopularAndAllProductsTest() {
         val firstPopularItem = MainPage()
-            .getPopularProducts()
+            .getProducts()
 
         HeaderComponent()
             .clickLink("Products")

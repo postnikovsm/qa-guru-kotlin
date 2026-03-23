@@ -14,7 +14,7 @@ class MainPageTest: BaseUITest()  {
     @DisplayName("Проверка количества товаров")
     fun checkCountProductTest() {
         val products = MainPage()
-            .getProducts()
+            .getProduct()
 
         products shouldHaveSize(2)
     }

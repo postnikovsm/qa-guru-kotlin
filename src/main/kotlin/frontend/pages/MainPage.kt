@@ -9,16 +9,15 @@ import io.qameta.allure.Step
 import org.example.frontend.helpers.Wrappers.Companion.byDataTestId
 import org.example.frontend.models.ProductItem
 import org.example.frontend.models.ProductItems
-import org.example.frontend.models.ProductPopularItem
-import org.example.frontend.models.ProductPopularItems
+
 
 class MainPage {
     private val txtTitle get() = element(byDataTestId("main-image-text"))
     private val productCard get() = elements(byClassName("product-card"))
-    private val listPopularProducts get() = ProductPopularItems().getItems()
+    private val listProducts get() = ProductItems().getItems()
 
     @Step("Получить список товаров")
-    fun getProducts(): ElementsCollection {
+    fun getProduct(): ElementsCollection {
         productCard.shouldHave(CollectionCondition.sizeGreaterThan(0))
         return this.productCard
     }
@@ -29,7 +28,7 @@ class MainPage {
     }
 
     @Step("Получить список популярных товаров")
-    fun getPopularProducts(): List<ProductPopularItem> {
-        return listPopularProducts
+    fun getProducts(): List<ProductItem> {
+        return listProducts
     }
 }
