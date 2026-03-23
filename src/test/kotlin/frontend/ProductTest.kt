@@ -15,10 +15,12 @@ class ProductTest: BaseUITest() {
     fun testProductsInCart() {
         val firstPopularItem = MainPage()
             .getPopularProducts()
+            .map { Triple(it.name, it.description, it.price) }
 
         HeaderComponent()
             .clickLink("Products")
         val firstItem = ProductsPage().getProducts()
+            .map { Triple(it.name, it.description, it.price) }
 
         firstItem.shouldContainAllInAnyOrder(firstPopularItem)
     }
