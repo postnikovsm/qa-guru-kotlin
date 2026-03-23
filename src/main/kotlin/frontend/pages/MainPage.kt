@@ -15,7 +15,7 @@ import org.example.frontend.models.ProductPopularItems
 class MainPage {
     private val txtTitle get() = element(byDataTestId("main-image-text"))
     private val productCard get() = elements(byClassName("product-card"))
-    private val listPopularProducts get() = ProductItems().getItems()
+    private val listPopularProducts get() = ProductPopularItems().getItems()
 
     @Step("Получить список товаров")
     fun getProducts(): ElementsCollection {
@@ -29,7 +29,7 @@ class MainPage {
     }
 
     @Step("Получить список популярных товаров")
-    fun getPopularProducts(): List<ProductItem> {
+    fun getPopularProducts(): List<ProductPopularItem> {
         return listPopularProducts
     }
 }
